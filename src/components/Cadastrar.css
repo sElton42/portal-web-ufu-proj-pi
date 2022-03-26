@@ -1,0 +1,89 @@
+.cadastrar {
+    background: #012999;
+    height: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 999;
+    animation: fadein .5s;
+}
+
+.cadastrar-container {
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 80vw;
+}
+
+.cadastrar-container-texto {
+    /* background-color: crimson;  */
+    height: 100%;
+    width: 40vw;
+}
+
+.cadastrar-texto {
+    /* background-color: chartreuse; */
+    color: #fff;
+    width: 25vw;
+    margin-left: 5vw;
+    margin-top: 4.5vw;
+    /* display: flex; */
+    /* padding: 3vw; */
+    /* opacity: 0.8 ; */
+}
+.cadastrar-texto-pequeno {
+    font-size: calc(0.3rem + 1vw);
+}
+
+.cadastrar-texto-grande {
+    margin-top: -1vw;
+    font-weight: 700;
+    /* margin-left: 5vw; */
+    font-size: calc(0.5rem + 2vw);
+    /* text-indent: 2vw; */
+}
+
+.cadastrar-links {
+    height: auto;
+    width: auto;
+    text-align: center;
+}
+
+.cadastrar-container-button {
+    /* background-color: darkblue; */
+    height: 100%;
+    width: 40vw;
+    text-align: center;
+}
+
+.cadastrar-button {
+    /* justify-self: end; */
+    /* margin-right: 0; */
+    background-color: #fff;
+    border-radius: 4.17vw;
+    width: 19.5vw;
+    height: 5vw;
+    margin-right: 5vw;
+    /* margin-top: 4.5vw; */
+    float: right;
+    /* text-align: center;
+    justify-self: center;
+    justify-content: center;
+    align-items: center; */
+    cursor: pointer;
+}
+
+.cadastrar-button-txt {
+    /* float: center; */
+    color: #012999;
+    font-weight: 700;
+    font-size: calc(0.3rem + 2vw);
+    margin-top: 0.9vw;
+}
+
+.cadastrar-button:hover {
+    background-color: #ffce00;
+    transition: all 0.3s ease-out;
+}

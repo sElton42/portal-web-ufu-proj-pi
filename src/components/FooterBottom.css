@@ -1,0 +1,76 @@
+.footerbottom {
+    background: #1a1a1a;
+    height: 10vw;
+    width: 100%;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 999;
+}
+
+.footerbottom-bordertop {
+    width: 100%;
+    border-top: 0.1vw solid #fff;
+    opacity: 0.25;
+}
+
+.footerbottom-container {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.footerbottom-conteudo {
+    width: 90vw;
+    height: 100%;
+    /* background-color: chocolate; */
+    color: #fff;
+    text-align: center;
+    display: flex;
+}
+
+.footerbottom-conteudo-divleft {
+    width: 30vw;
+    height: 100%;
+    /* background-color: darkcyan; */
+    text-align: center;
+    font-size: 1.1vw;
+    font-weight: 300;
+}
+
+.footerbottom-conteudo-divcenter {
+    width: 30vw;
+    height: 100%;
+    /* background-color: darkgreen; */
+    text-align: center;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+}
+
+.footerbottom-logo-img {
+    height: 60%;
+    width: 60%;
+    /* background-color: chartreuse; */
+    margin-top: 2vw;
+}
+
+.footerbottom-conteudo-divright {
+    width: 30vw;
+    height: 100%;
+    /* background-color: darkorange; */
+    text-align: right;
+    font-size: 0.9vw;
+    font-weight: 300;
+}
+
+.footerbottom-conteudo-divleft-txt {
+    margin-top: 4.2vw;
+}
+
+.footerbottom-conteudo-divright-txt {
+    margin-top: 2.5vw;
+}

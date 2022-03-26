@@ -1,0 +1,148 @@
+/* alterei com vw e comentei o q tava sem vw */
+
+.labels {
+    background: #eee;
+    /* height: 320px; */
+    height: 27vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 999;
+}
+
+.labels-container {
+    /* background: #eee; */
+    /* height: 380px; */
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    /* z-index: 999; */
+}
+
+.labels-menu {
+    /* padding-top: 50px; */
+    padding-top: 0vw;
+    margin-left: -40px;
+    display: grid;
+    /* background-color: #1a1a1a; */
+    grid-template-columns: repeat(4, auto);
+    /* grid-gap: 30px; */
+    grid-gap: 3vw;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    justify-self: center;
+    list-style: none;
+    /* font-size: 1.2rem; */
+    font-size: 1.6vw;
+    /* margin-top: 0; */
+}
+
+.labels-item {
+    /* height: 320px;    */
+    /* width: 250px; */
+    height: 22vw;
+    width: 22vw;
+    /* background-color: chocolate; */
+  }
+
+.labels-link {
+    color: #000;
+    font-weight: 300;
+    /* display: flex; */
+    align-items: center;
+    text-decoration: none;
+    height: 100%;
+}
+
+  /* .labels-img-noticias {
+      height: 100px;
+      width: 100px;
+  } */
+
+  .labels-div-img-news {
+    /* height: 100px;
+    width: 100px; */
+    height: 7.5vw;
+    width: 7.5vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../images/labels-newspaper.svg");
+    display: inline-block;
+    position: relative;
+  }
+
+  .labels-div-img-news:hover {
+    background-image: url("../images/labels-newspaper-selected.svg");
+  }
+
+  .labels-div-img-vagas {
+    /* height: 100px; */
+    /* width: 100px; */
+    height: 7.5vw;
+    width: 7.5vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../images/labels-vagas.svg");
+    display: inline-block;
+    position: relative;
+  }
+
+  .labels-div-img-vagas:hover {
+    background-image: url("../images/labels-vagas-selected.svg");
+  }
+
+  .labels-div-img-clas {
+    /* height: 100px; */
+    /* width: 100px; */
+    height: 7.5vw;
+    width: 7.5vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../images/labels-classificados.svg");
+    display: inline-block;
+    position: relative;
+  }
+
+  .labels-div-img-clas:hover {
+    background-image: url("../images/labels-classificados-selected.svg");
+  }
+
+  .labels-div-img-proj {
+    /* height: 100px; */
+    /* width: 100px; */
+    height: 7.5vw;
+    width: 7.5vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../images/labels-projs.svg");
+    display: inline-block;
+    position: relative;
+  }
+
+  .labels-div-img-proj:hover {
+    background-image: url("../images/labels-projs-selected.svg");
+  }
+
+  .labels-title {
+    margin-top: 0px;
+    margin-bottom: -10px;
+    font-weight: 700;
+    border-bottom: 0.25vw solid #000;
+    padding-bottom: 1.2vw;
+    /* background-color: chartreuse; */
+  }
+
+  .labels-txt {
+      padding-top: 0.4vw;
+      text-align: justify;
+      font-weight: 300;
+  }
+
+  .labels-linha {
+      margin-bottom: -10px;
+  }

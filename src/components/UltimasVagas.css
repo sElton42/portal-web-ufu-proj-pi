@@ -1,0 +1,117 @@
+.ultimasvagas {
+    background-color: #eee;
+    height: 65vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 999;
+    animation: fadein .5s;
+}
+
+.ultimasvagas-container {
+    /* background-color: blueviolet; */
+    width: 90vw;
+    height: 63vw;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.25vw;
+    color: #eee;
+}
+
+.ultimasvagas-fileira-1 {
+    /* background-color: chocolate; */
+    width: 100%;
+    height: 14.5vw;
+    display: flex;
+}
+
+.ultimasvagas-bloco-1 {
+    background-color: #012999;
+    width: 21.875vw;
+    height: 13.5vw;
+    margin-top: 0.5vw;
+    margin-left: 0.5vw;
+    border-radius: 1.25vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+.ultimasvagas-bloco-1:hover {
+    background-color: #ffce00;
+    color: #000;
+}
+
+.ultimasvagas-fileira-2 {
+    /* background-color: aqua; */
+    width: 100%;
+    height: 14.5vw;
+    display: flex;
+}
+
+.ultimasvagas-fileira-3 {
+    /* background-color: chartreuse; */
+    width: 100%;
+    height: 14.5vw;
+    display: flex;
+}
+
+.ultimasvagas-fileira-4 {
+    /* background-color: darkorange; */
+    width: 100%;
+    height: 14.5vw;
+    display: flex;
+}
+
+.ultimasvagas-bloco-titulo {
+    font-weight: 700;
+    margin-top: 0.75vw;
+    font-size: calc(0.3rem + 1.8vw);
+}
+
+.ultimasvagas-bloco-conteudo {
+    font-weight: 300;
+    font-size: calc(0.3rem + 0.8vw);
+    margin-top: 2.5vw;
+}
+
+.ultimasvagas-divarrows {
+    /* background-color: aqua; */
+    height: 5vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* text-align: center; */
+}
+
+.ultimasvagas-arrowleft {
+    height: 4vw;
+    width: 4vw; 
+    min-width: 40px;
+    min-height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../images/seta-left.svg");
+    cursor: pointer;
+}
+
+.ultimasvagas-arrowleft:hover {
+    background-image: url("../images/seta-left-selected.svg");
+}
+
+.ultimasvagas-arrowright {
+    height: 4vw;
+    width: 4vw; 
+    min-width: 40px;
+    min-height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../images/seta-right.svg");
+    cursor: pointer;
+}
+
+.ultimasvagas-arrowright:hover {
+    background-image: url("../images/seta-right-selected.svg");
+}

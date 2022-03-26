@@ -1,0 +1,201 @@
+.news {
+    /* background: #EEE; */
+    height: 94vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 999;
+    animation: fadein .5s;
+}
+
+.news-container {
+    background-color: #fff;
+    width: 90vw;
+    height: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.25vw;
+}
+
+.news-leftside {
+    /* background-color: #fff; */
+    width: 45vw;
+    height: 100%;
+}
+
+.news-rightside {
+    /* background-color: #fff; */
+    width: 45vw;
+    height: 100%;
+}
+
+.news-1 {
+    /* background-color: chartreuse; */
+    width: 43vw;
+    height: 30vw;
+    margin-left: 1vw;
+    margin-top: 1vw;
+    border-radius: 1.25vw;
+    text-align: center;
+}
+
+.news-1-img {
+    height: 25vw;
+    width: 100%; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../images/noticias1.jpg");
+    /* display: inline-block; */
+    /* position: relative; */
+    cursor: pointer;
+    border-radius: 1.25vw;
+}
+
+.news-legenda-big {
+    color: #000;
+    font-weight: 300;
+    margin-top: 0vw;
+    font-size: calc(0.3rem + 1.3vw);
+}
+
+.news-2 {
+    /* background-color: chocolate; */
+    width: 37vw;
+    height: 25vw;
+    margin-top: 1vw;
+    margin-left: 4vw;
+    border-radius: 1.25vw;
+    text-align: center;
+}
+
+.news-2-img {
+    width: 100%;
+    height: 20vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../images/noticias2.jpg");
+    /* display: inline-block; */
+    /* position: relative; */
+    cursor: pointer;
+    border-radius: 1.25vw;
+}
+
+.news-3 {
+    background-color: cornflowerblue;
+    width: 37vw;
+    height: 25vw;
+    margin-top: 1vw;
+    margin-left: 4vw;
+    border-radius: 1.25vw;
+}
+
+.news-3-img {
+    width: 100%;
+    height: 20vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../images/noticias1.jpg");
+    /* display: inline-block; */
+    /* position: relative; */
+    cursor: pointer;
+    border-radius: 1.25vw;
+}
+
+.news-4 {
+    /* background-color: darkmagenta; */
+    width: 40vw;
+    height: 28vw;
+    margin-top: 1vw;
+    margin-left: 2.5vw;
+    border-radius: 1.25vw;
+    text-align: center;
+}
+
+.news-4-img {
+    width: 100%;
+    height: 23vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../images/noticias2.jpg");
+    /* display: inline-block; */
+    /* position: relative; */
+    cursor: pointer;
+    border-radius: 1.25vw;
+}
+
+.news-5 {
+    /* background-color: darkorange; */
+    width: 37vw;
+    height: 25vw;
+    margin-top: 1vw;
+    margin-left: 4vw;
+    border-radius: 1.25vw;
+    text-align: center;
+}
+
+.news-6 {
+    /* background-color: darkgoldenrod; */
+    width: 37vw;
+    height: 25vw;
+    margin-top: 1vw;
+    margin-left: 4vw;
+    border-radius: 1.25vw;
+    text-align: center;
+}
+
+.news-box-arrows {
+    /* background-color: brown; */
+    width: 12vw;
+    margin-top: 3vw;
+    height: 6vw;
+    margin-left: 33vw;
+}
+
+.news-arrows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-arrowleft {
+    height: 6vw;
+    width: 6vw; 
+    min-width: 40px;
+    min-height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../images/seta-left.svg");
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.news-arrowright {
+    height: 6vw;
+    width: 6vw; 
+    min-width: 40px;
+    min-height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../images/seta-right.svg");
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.news-arrowleft:hover {
+    background-image: url("../images/seta-left-selected.svg");
+}
+
+.news-arrowright:hover {
+    background-image: url("../images/seta-right-selected.svg");
+}
+
+.news-legenda-little {
+    color: #000;
+    font-weight: 300;
+    margin-top: 0vw;
+    font-size: calc(0.3rem + 1vw);
+}

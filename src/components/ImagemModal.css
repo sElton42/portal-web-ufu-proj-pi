@@ -1,0 +1,52 @@
+.imagemmodal { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadein .5s;
+}
+
+.imagemmodal-container {
+    width: 60%;
+    height: 40%;
+    color: #000;
+    background-color: #fff;
+    border-radius: 0.5vw;
+}
+
+.imagemmodal-butclose {
+    background-color: transparent;
+    border: none;
+    float: right;
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    height: 2.5vw;
+    width: 2.5vw;
+    font-size: 1.5vw;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5vw;
+    margin-right: 0.5vw;
+}
+
+.imagemmodal-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5vw;
+}
+
+@keyframes fadein {
+	from {
+		opacity:0;
+	}
+	to {
+		opacity:1;
+	}
+}

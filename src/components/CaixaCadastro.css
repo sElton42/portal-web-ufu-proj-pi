@@ -1,0 +1,306 @@
+.caixacadastro {
+  background: #eee;
+  height: 65vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  z-index: 999;
+  animation: fadein .5s;
+}
+
+.caixacadastro-container {
+  background-color: #fff;
+  display: flex;
+  width: 45vw;
+  height: 60vw;
+  justify-content: center;
+  box-sizing: border-box;
+  box-shadow: 0.4vw 0.4vw 0.5vw rgba(0, 0, 0, 0.25);
+  border-radius: 0.5vw;
+  text-align: center;
+}
+
+.caixacadastro-conteudo {
+  width: 45vw;
+  height: 60vw;
+}
+
+.caixacadastro-title {
+  background-color: #012999;
+  border-top-left-radius: 0.5vw;
+  border-top-right-radius: 0.5vw;
+  width: 45vw;
+  height: 5vw;
+  font-weight: 400;
+  font-size: 2vw;
+  color: #fff;
+  margin-top: -2vw;
+}
+
+.caixacadastro-title-p {
+  padding-top: 1vw;
+}
+
+.caixacadastro-hero {
+  height: 55vw;
+  width: 45vw;
+  /* background-color: darkgoldenrod; */
+}
+
+.caixacadastro-nome {
+  /* background-color: aquamarine; */
+  width: 45vw;
+  height: 7.5vw;
+  padding-top: 1vw;
+}
+
+.caixacadastro-nome-title {
+  /* background-color: aqua; */
+  width: 45vw;
+  height: 4vw;
+  text-align: start;
+  align-items: center;
+  margin-bottom: 0;
+  /* padding-left: 6vw; */
+  display: flex;
+}
+
+.caixacadastro-nome-title-fig {
+  height: 2vw;
+  width: 2vw;
+  min-width: 20px;
+  min-height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/cadastrar-nome-completo.svg");
+  display: inline-block;
+  position: relative;
+  margin-left: 7.5vw;
+  margin-top: 2vw;
+}
+
+.caixacadastro-nome-title-p {
+  padding-left: 0.5vw;
+  margin-top: 2vw;
+  font-weight: 600;
+  font-size: calc(0.2rem + 1vw);
+}
+
+.caixacadastro-nome-entrada {
+  height: 2.5vw;
+  width: 45vw;
+  /* background-color: darkorange; */
+  display: flex;
+}
+
+.caixacadastro-nome-entrada-input {
+  width: 30vw;
+  height: 100%;
+  /* background-color: darkcyan; */
+  border-bottom: 0.14vw solid #000;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  margin-left: 7.5vw;
+  display: inline-block;
+  box-sizing: border-box;
+  outline: none;
+  font-size: calc(0.2rem + 1vw);
+}
+
+.caixacadastro-usuario {
+  width: 45vw;
+  height: 7.5vw;
+  margin-top: -0.5vw;
+}
+
+.caixacadastro-usuario-title-fig {
+  height: 2vw;
+  width: 2vw;
+  min-width: 20px;
+  min-height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/login-user.svg");
+  display: inline-block;
+  position: relative;
+  margin-left: 7.5vw;
+  margin-top: 2vw;
+}
+
+.caixacadastro-email-title-fig {
+  height: 2vw;
+  width: 2vw;
+  min-width: 20px;
+  min-height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/esqueceusenha-email.svg");
+  display: inline-block;
+  position: relative;
+  margin-left: 7.5vw;
+  margin-top: 2vw;
+}
+
+.caixacadastro-senha-title-fig {
+  height: 2vw;
+  width: 2vw;
+  min-width: 20px;
+  min-height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/login-senha.svg");
+  display: inline-block;
+  position: relative;
+  margin-left: 7.5vw;
+  margin-top: 2vw;
+}
+
+/* SELECT BOX ----------------------------------- */
+
+.caixacadastro-selectbox {
+  width: 45vw;
+  height: 9vw;
+  /* margin-top: 1vw; */
+  /* padding-top: 1vw; */
+  /* background-color: aquamarine; */
+  /* justify-content: start;
+  justify-items: start;
+  text-align: start; */
+}
+
+.container {
+/* background-color: aqua; */
+  display: block;
+  position: relative;
+  /* padding-left: 35px; */
+  /* margin-bottom: 12px; */
+  margin-top: 1vw;
+  /* margin-left: -7.5vw; */
+  cursor: pointer;
+  font-size: calc(0.3rem + 1vw);
+  /* -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; */
+  text-align: start;
+}
+
+.container-p {
+  margin-left: 10vw;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2vw;
+  width: 2vw;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  margin-left: 7.5vw;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #012999;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #012999;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 0.7vw;
+  left: 0.7vw;
+  width: 0.7vw;
+  height: 0.7vw;
+  border-radius: 50%;
+  background: #ffce00;
+}
+
+/* select {
+    background-color: #012999;
+    color: #fff;
+    border-bottom: 0.14vw solid #000;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;  
+ } */
+
+/* BOTÃO CADASTRAR */
+
+.caixacadastro-butlogin-container {
+  height: 4.5vw;
+  width: 45vw;
+  /* background-color: darkgreen; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vw;
+}
+
+.caixacadastro-butlogin-rect {
+  background-color: #1a1a1a;
+  width: 15vw;
+  height: 3.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3.47vw;
+  cursor: pointer;
+}
+
+.caixacadastro-butlogin-rect:hover {
+  background-color: #ffce00;
+}
+
+.caixacadastro-butlogin-rect:hover > .caixacadastro-butlogin-p {
+  color: #000;
+}
+
+.caixacadastro-butlogin-p {
+  font-size: calc(0.25rem + 1.75vw);
+  color: #fff;
+  font-weight: 600;
+  margin-top: 1.75vw;
+}
+
+.caixacadastro-infofaltantes {
+  width: 45vw;
+  height: 2vw;
+  /* background-color: aqua; */
+  /* margin-top: -1vw; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caixacadastro-infofaltantes-p {
+  font-size: calc(0.2rem + 0.75vw);
+  color: red;
+  font-weight: bold;
+}

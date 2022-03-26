@@ -1,0 +1,192 @@
+.paineluser {
+  background: #eee;
+  height: 43vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  z-index: 999;
+  animation: fadein .5s;
+}
+
+.paineluser-container {
+  background-color: #fff;
+  display: flex;
+  width: 80vw;
+  height: 38vw;
+  justify-content: center;
+  box-sizing: border-box;
+  box-shadow: 0.4vw 0.4vw 0.5vw rgba(0, 0, 0, 0.25);
+  border-radius: 0.5vw;
+  /* text-align: center; */
+}
+
+.paineluser-conteudo {
+  /* background-color: darkgoldenrod; */
+  width: 80vw;
+  height: 38vw;
+}
+
+.paineluser-title {
+  /* background-color: aqua; */
+  height: 3.75vw;
+  width: 80vw;
+  /* margin-top: -1.3vw; */
+  text-align: center;
+}
+
+.paineluser-title-line {
+  height: 0.3vw;
+  width: 10%;
+  background-color: #000;
+  margin: 0 auto;
+  margin-top: 1.25vw;
+  /* padding-top: 1.25vw; */
+}
+
+.paineluser-title-p {
+  font-weight: 600;
+  font-size: 2.5vw;
+  margin-top: 0.5vw;
+}
+
+.paineluser-opcoescontainer {
+  /* background-color: blueviolet; */
+  height: auto;
+  width: 80vw;
+}
+
+.paineluser-opcoescontainer-linha1 {
+  /* background-color: cadetblue; */
+  height: 15vw;
+  width: 80vw;
+  margin-top: 1vw;
+  display: flex;
+}
+
+.paineluser-bloco-links {
+  text-decoration: none;
+  /* margin-top: -0.5vw; */
+}
+
+.paineluser-bloco1 {
+  background-color: #012999;
+  height: 13.5vw;
+  width: 25.333vw;
+  margin-top: 0.5vw;
+  padding-top: 0.5vw;
+  margin-left: 1vw;
+  border-radius: 0.75vw;
+  text-align: center;
+  transition: all 0.15s ease-out;
+}
+
+.paineluser-bloco1-img {
+  /* background-color: aqua; */
+  background-image: url('../images/painel-user-newspaper.svg');
+  height: 7vw;
+  width: 7vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+  margin-top: 0.5vw;
+}
+
+.paineluser-bloco1:hover > .paineluser-bloco1-img {
+  background-image: url('../images/painel-user-newspaper-selected.svg');
+}
+
+.paineluser-bloco2-img {
+  /* background-color: aqua; */
+  background-image: url('../images/painel-user-vagas.svg');
+  height: 7vw;
+  width: 7vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+  margin-top: 0.5vw;
+}
+
+.paineluser-bloco1:hover > .paineluser-bloco2-img {
+  background-image: url('../images/painel-user-vagas-selected.svg');
+}
+
+.paineluser-bloco3-img {
+  /* background-color: aqua; */
+  background-image: url('../images/painel-user-classificados.svg');
+  height: 7vw;
+  width: 7vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+  margin-top: 0.5vw;
+}
+
+.paineluser-bloco1:hover > .paineluser-bloco3-img {
+  background-image: url('../images/painel-user-classificados-selected.svg');
+}
+
+.paineluser-bloco4-img {
+  /* background-color: aqua; */
+  background-image: url('../images/painel-user-proj.svg');
+  height: 7vw;
+  width: 7vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+  margin-top: 0.5vw;
+}
+
+.paineluser-bloco1:hover > .paineluser-bloco4-img {
+  background-image: url('../images/painel-user-proj-selected.svg');
+}
+
+.paineluser-bloco5-img {
+  /* background-color: aqua; */
+  background-image: url('../images/painel-user-editar-config.svg');
+  height: 7vw;
+  width: 7vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+  margin-top: 0.5vw;
+}
+
+.paineluser-bloco1:hover > .paineluser-bloco5-img {
+  background-image: url('../images/painel-user-editar-config-selected.svg');
+}
+
+.paineluser-bloco6-img {
+  /* background-color: aqua; */
+  background-image: url('../images/painel-user-sair.svg');
+  height: 7vw;
+  width: 7vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+  margin-top: 0.5vw;
+}
+
+.paineluser-bloco1:hover > .paineluser-bloco6-img {
+  background-image: url('../images/painel-user-sair-selected.svg');
+}
+
+.paineluser-bloco1-p {
+  /* background-color: aquamarine; */
+  width: 25.333vw;
+  height: 5.5vw;
+  font-size: 2vw;
+  color: #fff;
+  font-weight: 600;
+  margin: 0 auto;
+  margin-top: 0.5vw;
+}
+
+.paineluser-bloco1:hover {
+  background-color: #ffce00;
+}
+
+.paineluser-bloco1:hover > .paineluser-bloco1-p {
+  color: #000;
+}
+
