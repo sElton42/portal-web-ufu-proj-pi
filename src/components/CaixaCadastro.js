@@ -133,17 +133,17 @@ function CaixaCadastro() {
 
                         <label class="container" >
                             <p className='container-p'>Sou Aluno(a)</p>
-                            <input type="radio"  id='classificacao' value="aluno" onChange={(e)=>handle(e)} />
+                            <input type="radio"  name="radio" id='classificacao' value="aluno" onChange={(e)=>handle(e)} />
                             <span class="checkmark"></span>
                         </label>
                         <label class="container">
                             <p className='container-p'>Sou Professor(a)</p>
-                            <input type="radio" id='classificacao' value="professor" onChange={(e)=>handle(e)} />
+                            <input type="radio" name="radio" id='classificacao' value="professor" onChange={(e)=>handle(e)} />
                             <span class="checkmark"></span>
                         </label>
                         <label class="container">
                             <p className='container-p'>Outro</p>
-                            <input type="radio" id='classificacao' value="outro" onChange={(e)=>handle(e)} />
+                            <input type="radio" name="radio" id='classificacao' value="outro" onChange={(e)=>handle(e)} />
                             <span class="checkmark"></span>
                         </label>
 
