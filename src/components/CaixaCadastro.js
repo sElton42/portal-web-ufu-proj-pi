@@ -1,7 +1,26 @@
 import React from 'react';
 import './CaixaCadastro.css';
+import {useState} from 'react';
+// import { useForm } from "react-hook-form";
 
 function CaixaCadastro() {
+
+    const url = "";
+    const [data, setData] = useState({
+        username: "",
+        password: "",
+        nome: "",
+        email: "",
+        classificacao: "",
+        foto: "null"
+    })
+    function handle(e) {
+        const newdata = {...data}
+        newdata[e.target.id] = e.target.value
+        setData(newdata)
+        console.log(newdata)
+    }
+
   return (
     <div className='caixacadastro'>
         <div className='caixacadastro-container'>
@@ -20,8 +39,10 @@ function CaixaCadastro() {
                         <div className='caixacadastro-nome-entrada'>
                             <form>
                                 <input 
+                                    onChange={ (e) => handle(e) }
                                     className='caixacadastro-nome-entrada-input'
-                                    name='name'
+                                    name='nome'
+                                    id = 'nome'
                                     type='text'
                                     placeholder=''
                                     required
@@ -38,8 +59,10 @@ function CaixaCadastro() {
                         <div className='caixacadastro-nome-entrada'>
                             <form>
                                 <input 
+                                    onChange={(e)=>handle(e)}
                                     className='caixacadastro-nome-entrada-input'
                                     name='username'
+                                    id = 'username'
                                     type='text'
                                     placeholder=''
                                     required
@@ -56,8 +79,10 @@ function CaixaCadastro() {
                         <div className='caixacadastro-nome-entrada'>
                             <form>
                                 <input 
+                                    onChange={(e)=>handle(e)}
                                     className='caixacadastro-nome-entrada-input'
                                     name='email'
+                                    id = 'email'
                                     type='email'
                                     placeholder=''
                                     required
@@ -74,8 +99,10 @@ function CaixaCadastro() {
                         <div className='caixacadastro-nome-entrada'>
                             <form>
                                 <input 
+                                    onChange={(e)=>handle(e)}
                                     className='caixacadastro-nome-entrada-input'
-                                    name='psw'
+                                    name='password'
+                                    id = 'password'
                                     type='password'
                                     placeholder=''
                                     required
@@ -93,7 +120,7 @@ function CaixaCadastro() {
                             <form>
                                 <input 
                                     className='caixacadastro-nome-entrada-input'
-                                    name='psw'
+                                    name='senha2'
                                     type='password'
                                     placeholder=''
                                     required
@@ -104,21 +131,22 @@ function CaixaCadastro() {
 
                     <div className='caixacadastro-selectbox'>
 
-                        <label class="container">
+                        <label class="container" >
                             <p className='container-p'>Sou Aluno(a)</p>
-                            <input type="radio" name="radio"/>
+                            <input type="radio"  id='classificacao' value="aluno" onChange={(e)=>handle(e)} />
                             <span class="checkmark"></span>
                         </label>
                         <label class="container">
                             <p className='container-p'>Sou Professor(a)</p>
-                            <input type="radio" name="radio"/>
+                            <input type="radio" id='classificacao' value="professor" onChange={(e)=>handle(e)} />
                             <span class="checkmark"></span>
                         </label>
                         <label class="container">
                             <p className='container-p'>Outro</p>
-                            <input type="radio" name="radio"/>
+                            <input type="radio" id='classificacao' value="outro" onChange={(e)=>handle(e)} />
                             <span class="checkmark"></span>
                         </label>
+
                     </div>
 
                     <div className='caixacadastro-butlogin-container'>
