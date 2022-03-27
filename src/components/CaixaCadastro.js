@@ -6,7 +6,7 @@ import Axios from 'axios';
 
 function CaixaCadastro() {
 
-    const url = "https://ufuportalextra-env.eba-6prqdmyy.us-east-1.elasticbeanstalk.com/user/cadastrar";
+    const url = "http://ufuportalextra-env.eba-6prqdmyy.us-east-1.elasticbeanstalk.com/user/cadastrar";
     const [data, setData] = useState({
         username: "",
         password: "",

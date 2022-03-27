@@ -27,6 +27,7 @@ import LerClassificado from "./components/pages/LerClassificado";
 import LerProjeto from "./components/pages/LerProjeto";
 
 function App() {
+
   return (
     <>
       <Router>
