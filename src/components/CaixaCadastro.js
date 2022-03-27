@@ -1,11 +1,12 @@
 import React from 'react';
 import './CaixaCadastro.css';
 import {useState} from 'react';
+import Axios from 'axios';
 // import { useForm } from "react-hook-form";
 
 function CaixaCadastro() {
 
-    const url = "";
+    const url = "http://ufuportalextra-env.eba-6prqdmyy.us-east-1.elasticbeanstalk.com/user/cadastrar";
     const [data, setData] = useState({
         username: "",
         password: "",
@@ -14,6 +15,25 @@ function CaixaCadastro() {
         classificacao: "",
         foto: "null"
     })
+
+    function submit(e) {
+        e.preventDefault();
+        Axios.post(url, {
+            username: data.username,
+            password: data.password,
+            nome: data.nome,
+            email: data.email,
+            classificacao: data.classificacao,
+            foto: data.foto
+        })
+        .then(res=>{
+            console.log(res.data);
+        })
+        .catch(function (error) {
+            console.log(error);
+          });
+    }
+
     function handle(e) {
         const newdata = {...data}
         newdata[e.target.id] = e.target.value
@@ -149,7 +169,7 @@ function CaixaCadastro() {
 
                     </div>
 
-                    <div className='caixacadastro-butlogin-container'>
+                    <div className='caixacadastro-butlogin-container' onClick={(e)=>submit(e)}>
                         <div className='caixacadastro-butlogin-rect'>
                             <p className='caixacadastro-butlogin-p'>Cadastrar</p>
                         </div>
