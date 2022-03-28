@@ -12,7 +12,7 @@ function CaixaCadastro() {
     // Axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
     // Axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
-    const url = "https://cors-anywhere.herokuapp.com/http://ufuportalextra-env.eba-6prqdmyy.us-east-1.elasticbeanstalk.com/user/cadastrar";
+    const url = "http://ufuportalextra-env.eba-6prqdmyy.us-east-1.elasticbeanstalk.com/user/cadastrar";
     // https://cors-anywhere.herokuapp.com/{type_your_url_here}
     const [data, setData] = useState({
         username: "",
@@ -45,11 +45,11 @@ function CaixaCadastro() {
         //   });
 
         const Data = {
-            username : data.username,
-            password : data.password,
-            nome : data.nome,
-            email : data.email,
-            foto : data.foto,
+            username: data.username,
+            password: data.password,
+            nome: data.nome,
+            email: data.email,
+            foto: data.foto,
             classificacao: data.classificacao
         }
 
@@ -63,7 +63,7 @@ function CaixaCadastro() {
         }
         console.log(Data)
         fetch(url, otherParam)
-        .then(data=>{return data.json()})
+        .then(Data=>{return Data.json()})
         .then(function(response){
             alert("Classificado cadastro efetuado com sucesso!")
         })
