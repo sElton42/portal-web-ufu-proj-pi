@@ -19,20 +19,37 @@ function CaixaCadastro() {
     function submit(e) {
         e.preventDefault();
         
-        Axios.post(url, {
-            username: data.username,
-            password: data.password,
-            nome: data.nome,
-            email: data.email,
-            classificacao: data.classificacao,
-            foto: data.foto
+        console.log("dados enviados: ", data)
+        // console.log(data.username)
+
+        // Axios.post(url, {
+        //     username: data.username,
+        //     password: data.password,
+        //     nome: data.nome,
+        //     email: data.email,
+        //     classificacao: data.classificacao,
+        //     foto: data.foto
+        // })
+        // .then(res=>{
+        //     console.log(res.data);
+        // })
+        // .catch(function (error) {
+        //     console.log(error);
+        //   });
+
+        const otherParam = {
+            headers:{
+                "content-type":"application/json; charset=UTF-8",
+            },
+            body: data,
+            method: "POST"
+        }
+        fetch(url, otherParam)
+        .then(data=>{return data.json()})
+        .then(function(response){
+            alert("Classificado cadastro efetuado com sucesso!")
         })
-        .then(res=>{
-            console.log(res.data);
-        })
-        .catch(function (error) {
-            console.log(error);
-          });
+
     }
 
     function handle(e) {
