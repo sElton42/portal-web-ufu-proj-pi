@@ -2,7 +2,11 @@ const express = require('express')
 
 const { resolve, dirname } = require('path')
 
+const cors = require('cors')
+
 const app = express()
+
+app.use(cors())
 
 app.use('/', 
 express.static(
