@@ -6,7 +6,9 @@ import Axios from 'axios';
 
 function CaixaCadastro() {
 
-    const url = "http://ufuportalextra-env.eba-6prqdmyy.us-east-1.elasticbeanstalk.com/user/cadastrar";
+    Axios.defaults.withCredentials = true;
+
+    const url = "https://cors-anywhere.herokuapp.com/http://ufuportalextra-env.eba-6prqdmyy.us-east-1.elasticbeanstalk.com/user/cadastrar";
     const [data, setData] = useState({
         username: "",
         password: "",
@@ -37,13 +39,23 @@ function CaixaCadastro() {
         //     console.log(error);
         //   });
 
+        const Data = {
+            username : data.username,
+            password : data.password,
+            nome : data.nome,
+            email : data.email,
+            foto : data.foto,
+            classificacao: data.classificacao
+        }
+
         const otherParam = {
-            headers:{
-                "content-type":"application/json; charset=UTF-8",
-            },
-            body: data,
+            // headers:{
+            //     "content-type":"application/json; charset=UTF-8",
+            // },
+            body: Data,
             method: "POST"
         }
+        console.log(Data)
         fetch(url, otherParam)
         .then(data=>{return data.json()})
         .then(function(response){
