@@ -18,6 +18,7 @@ function CaixaCadastro() {
 
     function submit(e) {
         e.preventDefault();
+        
         Axios.post(url, {
             username: data.username,
             password: data.password,
