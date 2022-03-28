@@ -2,13 +2,18 @@ import React from 'react';
 import './CaixaCadastro.css';
 import {useState} from 'react';
 import Axios from 'axios';
+import Cors from 'cors';
 // import { useForm } from "react-hook-form";
 
 function CaixaCadastro() {
 
-    Axios.defaults.withCredentials = true;
+    // Axios.defaults.withCredentials = true;
+    // Axios.defaults.baseURL = 'https://cors-anywhere.herokuapp.com/http://ufuportalextra-env.eba-6prqdmyy.us-east-1.elasticbeanstalk.com/user/cadastrar';
+    // Axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
+    // Axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
     const url = "https://cors-anywhere.herokuapp.com/http://ufuportalextra-env.eba-6prqdmyy.us-east-1.elasticbeanstalk.com/user/cadastrar";
+    // https://cors-anywhere.herokuapp.com/{type_your_url_here}
     const [data, setData] = useState({
         username: "",
         password: "",
@@ -51,6 +56,7 @@ function CaixaCadastro() {
         const otherParam = {
             // headers:{
             //     "content-type":"application/json; charset=UTF-8",
+            //     "Access-Control-Allow-Origin": "*"
             // },
             body: Data,
             method: "POST"

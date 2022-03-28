@@ -1,10 +1,34 @@
 const express = require('express')
+const cors = require('cors')
+const axios = require('axios')
+const app = express()
 
 const { resolve, dirname } = require('path')
 
-const cors = require('cors')
-
-const app = express()
+app.use(cors())
+app.get('/sms', (req,res)=>{   
+     
+    axios.post('http://ufuportalextra-env.eba-6prqdmyy.us-east-1.elasticbeanstalk.com/user/cadastrar',{    
+        
+        username: "teste",
+        password: "teste",
+        nome: "teste",
+        email:"teste",
+        classificacao: "teste",
+        foto: "teste"
+    })
+    .then(function(response){
+        console.log(response.data)
+        console.log(response.headers)
+        console.log(response.status)
+    }).catch(function(error){
+        if(error){
+            console.log(error)
+        }
+    })
+    
+    return res.json({teste:1})
+}) 
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
