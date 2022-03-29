@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.9d459b7b.css",
-    "main.js": "/static/js/main.866804fb.js",
+    "main.js": "/static/js/main.e38a00e2.js",
     "static/media/clas2-1.jpg": "/static/media/clas2-1.dfa2e157752d1c624d0f.jpg",
     "static/media/vagas-estagio1.png": "/static/media/vagas-estagio1.7defad9ec90355d30553.png",
     "static/media/elton.jpg": "/static/media/elton.eed43f4b6ccd43b932d8.jpg",
@@ -45,8 +45,8 @@
     "static/media/login-senha.svg": "/static/media/login-senha.b0277bea49e5509ff8fe.svg",
     "static/media/header-user.svg": "/static/media/header-user.c668ae3b278c2e7f2638.svg",
     "static/media/cadastrar-nome-completo.svg": "/static/media/cadastrar-nome-completo.ef1ed37dddcbb7ac2295.svg",
-    "static/media/aboutus-place.svg": "/static/media/aboutus-place.7d3bc10bcffaf640d781df6e23635551.svg",
     "index.html": "/index.html",
+    "static/media/aboutus-place.svg": "/static/media/aboutus-place.7d3bc10bcffaf640d781df6e23635551.svg",
     "static/media/esqueceusenha-email.svg": "/static/media/esqueceusenha-email.b28a9f0e294b56ee16ab.svg",
     "static/media/painel-user-classificados-selected.svg": "/static/media/painel-user-classificados-selected.90fbb876e13805161248.svg",
     "static/media/painel-user-classificados.svg": "/static/media/painel-user-classificados.9f494d6af8f0c9484998.svg",
@@ -60,10 +60,10 @@
     "static/media/labels-classificados-selected.svg": "/static/media/labels-classificados-selected.614fcac8dc74dc1512f5.svg",
     "static/media/labels-classificados.svg": "/static/media/labels-classificados.400542b418ff3e979bc7.svg",
     "main.9d459b7b.css.map": "/static/css/main.9d459b7b.css.map",
-    "main.866804fb.js.map": "/static/js/main.866804fb.js.map"
+    "main.e38a00e2.js.map": "/static/js/main.e38a00e2.js.map"
   },
   "entrypoints": [
     "static/css/main.9d459b7b.css",
-    "static/js/main.866804fb.js"
+    "static/js/main.e38a00e2.js"
   ]
 }

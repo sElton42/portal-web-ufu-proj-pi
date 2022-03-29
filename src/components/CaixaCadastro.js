@@ -7,10 +7,11 @@ import Cors from 'cors';
 
 function CaixaCadastro() {
 
-    Axios.defaults.withCredentials = true;
-    Axios.defaults.baseURL = 'https://cors-anywhere.herokuapp.com/http://ufuportalextra-env.eba-6prqdmyy.us-east-1.elasticbeanstalk.com/user/cadastrar';
-    Axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
-    Axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+    // Axios.defaults.withCredentials = false;
+    // Axios.defaults.baseURL = 'http://ufuportalextra-env.eba-6prqdmyy.us-east-1.elasticbeanstalk.com/user/cadastrar';
+    // Axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
+    // Axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+    // Axios.withCredentials = false;
 
     const url = "http://ufuportalextra-env.eba-6prqdmyy.us-east-1.elasticbeanstalk.com/user/cadastrar";
     // https://cors-anywhere.herokuapp.com/{type_your_url_here}
@@ -29,44 +30,44 @@ function CaixaCadastro() {
         console.log("dados enviados: ", data)
         // console.log(data.username)
 
-        Axios.post(url, {
-            username: data.username,
-            password: data.password,
-            nome: data.nome,
-            email: data.email,
-            classificacao: data.classificacao,
-            foto: data.foto
-        })
-        .then(res=>{
-            console.log(res.data);
-        })
-        .catch(function (error) {
-            console.log(error);
-          });
-
-        // const Data = {
+        // Axios.post(url, {
         //     username: data.username,
         //     password: data.password,
         //     nome: data.nome,
         //     email: data.email,
-        //     foto: data.foto,
-        //     classificacao: data.classificacao
-        // }
+        //     classificacao: data.classificacao,
+        //     foto: data.foto
+        // })
+        // .then(res=>{
+        //     console.log(res.data);
+        // })
+        // .catch(function (error) {
+        //     console.log(error);
+        //   });
 
-        // const otherParam = {
+        const Data = {
+            username: data.username,
+            password: data.password,
+            nome: data.nome,
+            email: data.email,
+            foto: data.foto,
+            classificacao: data.classificacao
+        }
+
+        const otherParam = {
             // headers:{
             //     "content-type":"application/json; charset=UTF-8",
             //     "Access-Control-Allow-Origin": "*"
             // },
-        //     body: Data,
-        //     method: "POST"
-        // }
-        // console.log(Data)
-        // fetch(url, otherParam)
-        // .then(Data=>{return Data.json()})
-        // .then(function(response){
-        //     alert("Classificado cadastro efetuado com sucesso!")
-        // })
+            body: Data,
+            method: "POST"
+        }
+        console.log(Data)
+        fetch(url, otherParam)
+        .then(Data=>{return Data.json()})
+        .then(function(response){
+            alert("Classificado cadastro efetuado com sucesso!")
+        })
 
     }
 
