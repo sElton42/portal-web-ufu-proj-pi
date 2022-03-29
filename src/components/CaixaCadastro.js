@@ -1,9 +1,10 @@
 import React from 'react';
 import './CaixaCadastro.css';
 import {useState} from 'react';
-import Axios from 'axios';
-import Cors from 'cors';
+// import Axios from 'axios';
+// import Cors from 'cors';
 // import { useForm } from "react-hook-form";
+import results from '../results';
 
 function CaixaCadastro() {
 
@@ -13,7 +14,7 @@ function CaixaCadastro() {
     // Axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
     // Axios.withCredentials = false;
 
-    const url = "http://ufuportalextra-env.eba-6prqdmyy.us-east-1.elasticbeanstalk.com/user/cadastrar";
+    // const url = "https://cors-anywhere.herokuapp.com/http://ufuportalextra-env.eba-6prqdmyy.us-east-1.elasticbeanstalk.com/user/cadastrar";
     // https://cors-anywhere.herokuapp.com/{type_your_url_here}
     const [data, setData] = useState({
         username: "",
@@ -30,6 +31,19 @@ function CaixaCadastro() {
         console.log("dados enviados: ", data)
         // console.log(data.username)
 
+        const Data = {
+            username: data.username,
+            password: data.password,
+            nome: data.nome,
+            email: data.email,
+            classificacao: data.classificacao,
+            foto: data.foto
+        }
+        results.post('/marks.json', Data)
+        .then(response=>{
+            console.log(response);
+        })
+
         // Axios.post(url, {
         //     username: data.username,
         //     password: data.password,
@@ -45,29 +59,34 @@ function CaixaCadastro() {
         //     console.log(error);
         //   });
 
-        const Data = {
-            username: data.username,
-            password: data.password,
-            nome: data.nome,
-            email: data.email,
-            foto: data.foto,
-            classificacao: data.classificacao
-        }
+        // const roles = {
+        //     name: "ADMIN"
+        // }
 
-        const otherParam = {
-            // headers:{
-            //     "content-type":"application/json; charset=UTF-8",
-            //     "Access-Control-Allow-Origin": "*"
-            // },
-            body: Data,
-            method: "POST"
-        }
-        console.log(Data)
-        fetch(url, otherParam)
-        .then(Data=>{return Data.json()})
-        .then(function(response){
-            alert("Classificado cadastro efetuado com sucesso!")
-        })
+        // const Data = {
+        //     username: data.username,
+        //     password: data.password,
+        //     nome: data.nome,
+        //     email: data.email,
+        //     foto: data.foto,
+        //     classificacao: data.classificacao
+            // roles: roles.value
+        // }
+
+    //     const otherParam = {
+    //         headers:{
+    //             "content-type":"application/json; charset=UTF-8",
+    //             "Access-Control-Allow-Origin": "*"
+    //         },
+    //         body: Data,
+    //         method: "POST"
+    //     }
+    //     console.log(Data)
+    //     fetch(url, otherParam)
+    //     .then(Data=>{return Data.json()})
+    //     .then(function(response){
+    //         alert("Classificado cadastro efetuado com sucesso!")
+    //     })
 
     }
 
