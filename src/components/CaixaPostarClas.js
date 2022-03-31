@@ -1,7 +1,45 @@
 import React from "react";
 import "./CaixaPostarClas.css";
+import {useState} from 'react';
+import instancedb from '../apis/instancedb';
+
 
 function CaixaPostarClas() {
+
+  const [data, setData] = useState({
+    titulo: "",
+    descricao: "",
+    conteudo: "",
+    capa: "null",
+    ilustracoes: "null"
+})
+
+function submit(e) {
+    e.preventDefault();
+    
+    console.log("dados enviados: ", data)
+    // console.log(data.username)
+
+    const Data = {
+        titulo: data.titulo,
+        descricao: data.descricao,
+        conteudo: data.conteudo,
+        capa: data.capa,
+        ilustracoes: data.ilustracoes
+    }
+    instancedb.post('/classificados.json', Data)
+    .then(response=>{
+        console.log(response);
+    })
+}
+
+function handle(e) {
+    const newdata = {...data}
+    newdata[e.target.id] = e.target.value
+    setData(newdata)
+    console.log(newdata)
+}
+
   return (
     <div className="caixapostarclas">
       <div className="caixapostarclas-container">
@@ -91,8 +129,10 @@ function CaixaPostarClas() {
               <div className="caixapostarclas-titulo-entrada">
                 <form>
                   <input
+                    onChange={(e)=>handle(e)}
                     className="caixapostarclas-titulo-entrada-input"
                     name="titulo"
+                    id = "titulo"
                     type="text"
                     placeholder=""
                     required
@@ -106,8 +146,10 @@ function CaixaPostarClas() {
               <div className="caixapostarclas-conteudo-entrada">
                 <form>
                   <textarea
+                    onChange={(e)=>handle(e)}
                     className="caixapostarclas-titulo-entrada-input"
                     name="descricao"
+                    id="descricao"
                     type="text"
                     placeholder=""
                     required
@@ -121,8 +163,10 @@ function CaixaPostarClas() {
               <div className="caixapostarnoticia-conteudo-entrada">
                 <form>
                   <textarea
+                    onChange={(e)=>handle(e)}
                     className="caixapostarnoticia-titulo-entrada-input"
                     name="conteudo"
+                    id="conteudo"
                     type="text"
                     placeholder=""
                     required
@@ -153,7 +197,7 @@ function CaixaPostarClas() {
             </div>
             <p className="caixapostarclas-butprocurar2-infop">Imagens Inseridas!</p>
 
-            <div className="caixapostarclas-butpostar-rect">
+            <div className="caixapostarclas-butpostar-rect" onClick={(e)=>submit(e)}>
               <p className="caixapostarclas-butpostar-p">Postar</p>
             </div>
             <p className="caixapostarclas-butpostar-infop">

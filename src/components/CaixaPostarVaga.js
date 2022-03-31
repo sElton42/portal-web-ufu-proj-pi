@@ -1,7 +1,46 @@
 import React from "react";
 import "./CaixaPostarVaga.css";
+import {useState} from 'react';
+import instancedb from '../apis/instancedb';
 
 function CaixaPostarVaga() {
+  
+  const [data, setData] = useState({
+    tipo: "",
+    area: "",
+    empresa: "",
+    local: "",
+    conteudo: "",
+    ilustracoes: "null"
+})
+
+function submit(e) {
+    e.preventDefault();
+    
+    console.log("dados enviados: ", data)
+    // console.log(data.username)
+
+    const Data = {
+        tipo: data.tipo,
+        area: data.area,
+        empresa: data.empresa,
+        local: data.local,
+        conteudo: data.conteudo,
+        ilustracoes: data.ilustracoes
+    }
+    instancedb.post('/vagas.json', Data)
+    .then(response=>{
+        console.log(response);
+    })
+}
+
+function handle(e) {
+    const newdata = {...data}
+    newdata[e.target.id] = e.target.value
+    setData(newdata)
+    console.log(newdata)
+}
+  
   return (
     <div className="caixapostarvaga">
       <div className="caixapostarvaga-container">
@@ -109,8 +148,10 @@ function CaixaPostarVaga() {
               <div className="caixapostarvaga-titulo-entrada">
                 <form>
                   <input
+                    onChange={(e)=>handle(e)}
                     className="caixapostarvaga-titulo-entrada-input"
                     name="tipo"
+                    id = 'tipo'
                     type="text"
                     placeholder=""
                     required
@@ -124,8 +165,10 @@ function CaixaPostarVaga() {
               <div className="caixapostarvaga-titulo-entrada">
                 <form>
                   <input
+                    onChange={(e)=>handle(e)}
                     className="caixapostarvaga-titulo-entrada-input"
                     name="area"
+                    id = 'area'
                     type="text"
                     placeholder=""
                     required
@@ -139,8 +182,10 @@ function CaixaPostarVaga() {
               <div className="caixapostarvaga-titulo-entrada">
                 <form>
                   <input
+                    onChange={(e)=>handle(e)}
                     className="caixapostarvaga-titulo-entrada-input"
                     name="empresa"
+                    id = 'empresa'
                     type="text"
                     placeholder=""
                     required
@@ -154,8 +199,10 @@ function CaixaPostarVaga() {
               <div className="caixapostarvaga-titulo-entrada">
                 <form>
                   <input
+                    onChange={(e)=>handle(e)}
                     className="caixapostarvaga-titulo-entrada-input"
                     name="local"
+                    id = 'local'
                     type="text"
                     placeholder=""
                     required
@@ -169,8 +216,10 @@ function CaixaPostarVaga() {
               <div className="caixapostarvaga-conteudo-entrada">
                 <form>
                   <textarea
+                    onChange={(e)=>handle(e)}
                     className="caixapostarvaga-titulo-entrada-input"
                     name="conteudo"
+                    id = 'conteudo'
                     type="text"
                     placeholder=""
                     required
@@ -190,7 +239,7 @@ function CaixaPostarVaga() {
             </div>
             <p className="caixapostarvaga-butprocurar2-infop">Imagens Inseridas!</p>
 
-            <div className="caixapostarvaga-butpostar-rect">
+            <div className="caixapostarvaga-butpostar-rect" onClick={(e)=>submit(e)}>
               <p className="caixapostarvaga-butpostar-p">Postar</p>
             </div>
             <p className="caixapostarvaga-butpostar-infop">

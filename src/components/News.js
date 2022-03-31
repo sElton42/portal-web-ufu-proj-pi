@@ -7,7 +7,7 @@ function News() {
     <div className='news'>
         <div className='news-container'>
             <div className='news-leftside'>
-                <Link className="linknoticias" to='/lernoticia'>
+                <Link className="linknoticias" to='/teste'>
                     <div className='news-1'>
                         <div className='news-1-img'></div>
                         <p className='news-legenda-big'>UFU vai receber mais 4 milhões para continuidade da construção do primeiro bloco.</p>

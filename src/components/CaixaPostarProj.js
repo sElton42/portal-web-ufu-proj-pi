@@ -1,7 +1,46 @@
 import React from "react";
 import "./CaixaPostarProj.css";
+import {useState} from 'react';
+import instancedb from '../apis/instancedb';
 
 function CaixaPostarProj() {
+
+  const [data, setData] = useState({
+    titulo: "",
+    autores: "",
+    data: "",
+    conteudo: "",
+    capa: "null",
+    ilustracoes: "null"
+})
+
+function submit(e) {
+    e.preventDefault();
+    
+    console.log("dados enviados: ", data)
+    // console.log(data.username)
+
+    const Data = {
+        titulo: data.titulo,
+        autores: data.autores,
+        data: data.data,
+        conteudo: data.conteudo,
+        capa: data.capa,
+        ilustracoes: data.ilustracoes
+    }
+    instancedb.post('/projetos.json', Data)
+    .then(response=>{
+        console.log(response);
+    })
+}
+
+function handle(e) {
+    const newdata = {...data}
+    newdata[e.target.id] = e.target.value
+    setData(newdata)
+    console.log(newdata)
+}
+
   return (
     <div className="caixapostarproj">
       <div className="caixapostarproj-container">
@@ -112,8 +151,10 @@ function CaixaPostarProj() {
               <div className="caixapostarproj-titulo-entrada">
                 <form>
                   <input
+                    onChange={(e)=>handle(e)}
                     className="caixapostarproj-titulo-entrada-input"
                     name="titulo"
+                    id = "titulo"
                     type="text"
                     placeholder=""
                     required
@@ -127,8 +168,10 @@ function CaixaPostarProj() {
               <div className="caixapostarproj-titulo-entrada">
                 <form>
                   <input
+                    onChange={(e)=>handle(e)}
                     className="caixapostarproj-titulo-entrada-input"
                     name="autores"
+                    id = "autores"
                     type="text"
                     placeholder=""
                     required
@@ -142,8 +185,10 @@ function CaixaPostarProj() {
               <div className="caixapostarproj-titulo-entrada">
                 <form>
                   <input
+                    onChange={(e)=>handle(e)}
                     className="caixapostarproj-titulo-entrada-input"
                     name="data"
+                    id = "data"
                     type="date"
                     placeholder=""
                     required
@@ -157,8 +202,10 @@ function CaixaPostarProj() {
               <div className="caixapostarnoticia-conteudo-entrada">
                 <form>
                   <textarea
+                    onChange={(e)=>handle(e)}
                     className="caixapostarnoticia-titulo-entrada-input"
                     name="conteudo"
+                    id="conteudo"
                     type="text"
                     placeholder=""
                     required
@@ -189,7 +236,7 @@ function CaixaPostarProj() {
             </div>
             <p className="caixapostarproj-butprocurar2-infop">Imagens Inseridas!</p>
 
-            <div className="caixapostarproj-butpostar-rect">
+            <div className="caixapostarproj-butpostar-rect" onClick={(e)=>submit(e)}>
               <p className="caixapostarproj-butpostar-p">Postar</p>
             </div>
             <p className="caixapostarproj-butpostar-infop">

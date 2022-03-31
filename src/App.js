@@ -25,6 +25,7 @@ import LerNoticia from "./components/pages/LerNoticia";
 import LerVagas from "./components/pages/LerVagas";
 import LerClassificado from "./components/pages/LerClassificado";
 import LerProjeto from "./components/pages/LerProjeto";
+import Teste from "./components/pages/teste";
 
 function App() {
 
@@ -55,6 +56,7 @@ function App() {
           <Route exact path='/lervagas' element={<LerVagas />} />
           <Route exact path='/lerclassificado' element={<LerClassificado />} />
           <Route exact path='/lerprojeto' element={<LerProjeto />} />
+          <Route exact path='/teste' element={<Teste />} />
         </Routes>
         <Footer />
         <FooterBottom />

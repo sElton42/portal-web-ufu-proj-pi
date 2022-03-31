@@ -1,7 +1,27 @@
 import React from "react";
 import "./CaixaRemovUser.css";
+import instancedb from '../apis/instancedb';
+import {useState} from 'react';
+import ResultFetchUsers from "./resultFetchUsers.js";
 
 function CaixaRemovUser() {
+
+
+  
+  const getUser = () => {
+    instancedb.get('/usuarios.json')
+    .then(res => {
+      // console.log(res)
+
+      const usuariosRecuperados = res.data
+      console.log(usuariosRecuperados)
+      
+
+    }).catch(err => {
+      console.log(err)
+    })
+  }
+
   return (
     <>
       <div className="caixaremovuser">
@@ -19,10 +39,15 @@ function CaixaRemovUser() {
 
                 <div className="caixaremovuser-removcontainer-selectboxcontainer">
                   <div class="select">
-                    <select id="standard-select">
-                      <option value="Option 1">Elton S</option>
-                      <option value="Option 2">Marcus V</option>
-                    </select>
+                  {/* <div class="select" onClick={getUser}> */}
+                    {/* <select id="standard-select"> */}
+                        {/* <div> */}
+                        {/* <option> */}
+                          {/* teste */}
+                          <ResultFetchUsers/>
+                        {/* </option> */}
+                        {/* </div> */}
+                    {/* </select> */}
                     <span class="focus"></span>
                   </div>
                 </div>

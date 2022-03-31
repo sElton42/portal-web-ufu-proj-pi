@@ -136,8 +136,8 @@
   align-items: center;
   position: relative;
 
-  min-width: 15ch;
-  max-width: 30ch;
+  min-width: 45vw;
+  max-width: 45vw;
 
   border: 0.14vw solid var(--select-border);
   border-radius: 0.25vw;

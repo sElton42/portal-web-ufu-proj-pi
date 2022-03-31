@@ -4,7 +4,7 @@ import {useState} from 'react';
 // import Axios from 'axios';
 // import Cors from 'cors';
 // import { useForm } from "react-hook-form";
-import results from '../results';
+import instancedb from '../apis/instancedb';
 
 function CaixaCadastro() {
 
@@ -39,7 +39,7 @@ function CaixaCadastro() {
             classificacao: data.classificacao,
             foto: data.foto
         }
-        results.post('/marks.json', Data)
+        instancedb.post('/usuarios.json', Data)
         .then(response=>{
             console.log(response);
         })

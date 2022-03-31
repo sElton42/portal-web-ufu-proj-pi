@@ -1,7 +1,43 @@
 import React from "react";
 import "./CaixaPostarNoticia.css";
+import {useState} from 'react';
+import instancedb from '../apis/instancedb';
 
 function CaixaPostarNoticia() {
+
+  const [data, setData] = useState({
+    titulo: "",
+    conteudo: "",
+    capa: "null",
+    ilustracoes: "null"
+})
+
+function submit(e) {
+    e.preventDefault();
+    
+    console.log("dados enviados: ", data)
+    // console.log(data.username)
+
+    const Data = {
+        titulo: data.titulo,
+        conteudo: data.conteudo,
+        capa: data.capa,
+        ilustracoes: data.ilustracoes
+    }
+    instancedb.post('/noticias.json', Data)
+    .then(response=>{
+        console.log(response);
+    })
+}
+
+function handle(e) {
+    const newdata = {...data}
+    newdata[e.target.id] = e.target.value
+    setData(newdata)
+    console.log(newdata)
+}
+
+
   return (
     <div className="caixapostarnoticia">
       <div className="caixapostarnoticia-container">
@@ -75,8 +111,10 @@ function CaixaPostarNoticia() {
               <div className="caixapostarnoticia-titulo-entrada">
                 <form>
                   <input
+                    onChange={(e)=>handle(e)}
                     className="caixapostarnoticia-titulo-entrada-input"
-                    name="nome"
+                    name="titulo"
+                    id="titulo"
                     type="text"
                     placeholder=""
                     required
@@ -90,8 +128,10 @@ function CaixaPostarNoticia() {
               <div className="caixapostarnoticia-conteudo-entrada">
                 <form>
                   <textarea
+                    onChange={(e)=>handle(e)}
                     className="caixapostarnoticia-titulo-entrada-input"
                     name="conteudo"
+                    id="conteudo"
                     type="text"
                     placeholder=""
                     required
@@ -122,7 +162,7 @@ function CaixaPostarNoticia() {
             </div>
             <p className="caixapostarnoticia-butprocurar2-infop">Imagens Inseridas!</p>
 
-            <div className="caixapostarnoticia-butpostar-rect">
+            <div className="caixapostarnoticia-butpostar-rect" onClick={(e)=>submit(e)}>
               <p className="caixapostarnoticia-butpostar-p">Postar</p>
             </div>
             <p className="caixapostarnoticia-butpostar-infop">

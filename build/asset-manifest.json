@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9d459b7b.css",
-    "main.js": "/static/js/main.8a76773b.js",
+    "main.css": "/static/css/main.07b7b7a5.css",
+    "main.js": "/static/js/main.ccc2529d.js",
     "static/media/clas2-1.jpg": "/static/media/clas2-1.dfa2e157752d1c624d0f.jpg",
     "static/media/vagas-estagio1.png": "/static/media/vagas-estagio1.7defad9ec90355d30553.png",
     "static/media/elton.jpg": "/static/media/elton.eed43f4b6ccd43b932d8.jpg",
@@ -59,11 +59,11 @@
     "static/media/editar-info-button-procurar-pasta.svg": "/static/media/editar-info-button-procurar-pasta.62255feb806d5a492791.svg",
     "static/media/labels-classificados-selected.svg": "/static/media/labels-classificados-selected.614fcac8dc74dc1512f5.svg",
     "static/media/labels-classificados.svg": "/static/media/labels-classificados.400542b418ff3e979bc7.svg",
-    "main.9d459b7b.css.map": "/static/css/main.9d459b7b.css.map",
-    "main.8a76773b.js.map": "/static/js/main.8a76773b.js.map"
+    "main.07b7b7a5.css.map": "/static/css/main.07b7b7a5.css.map",
+    "main.ccc2529d.js.map": "/static/js/main.ccc2529d.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d459b7b.css",
-    "static/js/main.8a76773b.js"
+    "static/css/main.07b7b7a5.css",
+    "static/js/main.ccc2529d.js"
   ]
 }
